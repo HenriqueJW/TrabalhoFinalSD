@@ -44,7 +44,7 @@ public class Coletor {
             JOptionPane.showMessageDialog(null, "Erro de leitura!");
         }
 
-        IntegradorInflux integrador = new IntegradorInflux(args[0], args[1], args[2], args[3]); //Precisa passar argumentos ao iniciar (dados da base, user, etc.)
+        IntegradorKafka integrador = new IntegradorKafka(); 
         Timer timer = new Timer();
         timer.scheduleAtFixedRate(new TimerTask() {
             public void run() {
